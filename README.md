@@ -7,7 +7,7 @@ Place **exactly one file** in each input folder:
 
 ```
 IGV/
-├── genomic_attribution_visualizer.ipynb
+├── IGV.ipynb
 │
 ├── tensor/          ← your .npy tensor   (samples × SNPs × classes)
 ├── bed_file/        ← your .bed file     (chrom  start  end,  no header)
