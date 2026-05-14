@@ -26,7 +26,7 @@ The notebook auto-detects all files — no path editing needed.
 
 ```bash
 git clone https://github.com/your-username/attribution-genome-browser.git
-cd IGV
+cd /path_to_IGV_folder
 ```
 NOTE: IGV should be your current directory
 
