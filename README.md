@@ -12,7 +12,7 @@ IGV/
 ├── tensor/          ← your .npy tensor   (samples × SNPs × classes)
 ├── bed_file/        ← your .bed file     (chrom  start  end,  no header)
 ├── annotation/      ← gencode_genes.gtf  (gene rows only — see setup below)
-├── class/           ← class.tsv  (tsv file with class names where each lines has one class name that's in the same order that that classes are ordered in tensor)
+├── class/           ← class.tsv  (tsv file with class names where each lines has one class name that's in the same order that classes are ordered in tensor)
 │
 └── chr_plots/       ← output PNGs  (auto-created on first run)
 ```
