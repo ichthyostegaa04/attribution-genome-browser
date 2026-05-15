@@ -45,7 +45,7 @@ Download GTF anottation file and put it in annotation folder. There's already an
 
 ```
 tensor/     →  your_tensor.npy     shape: (samples, SNPs, classes)
-bed_file/   →  your_snps.bed       columns: chrom  start  end  (no header, tab-separated)
+bed_file/   →  your_snps.bed       columns: (header, tab-separated)
 ```
 
 > The tensor and BED must have the **same SNP order**: axis 1 of the tensor = rows of the BED file.
