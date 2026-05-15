@@ -10,9 +10,9 @@ IGV/
 ├── IGV.ipynb
 │
 ├── tensor/          ← your .npy tensor   (samples × SNPs × classes)
-├── bed_file/        ← your .bed file     (chrom  start  end,  no header)
-├── annotation/      ← gencode_genes.gtf  (gene rows only — see setup below)
-├── class/           ← class.tsv  (tsv file with class names where each lines has one class name that's in the same order that classes are ordered in tensor)
+├── bed_file/        ← your .bed file     (must contain header)
+├── annotation/      ← annotation.gtf
+├── class/           ← class.tsv  (tsv file where each lines represents one class name that's in the same order that classes are ordered in tensor)
 │
 └── chr_plots/       ← output PNGs  (auto-created on first run)
 ```
@@ -39,7 +39,10 @@ pip install numpy pandas scipy matplotlib statsmodels ipywidgets
 
 ### 3. Download gene annotation (one-time)
 
-Download GTF anottation file and put it in annotation folder. There's already an annotation file present, but if you wish to load an updated annotation file, replace the current annotation file with your own.
+Download GTF anottation file and put it in annotation folder. There's already a reduced annotation file present for demonstration purposes, but if you wish to load a full annotation file, replace the current annotation file with your own.
+
+To use existing file:
+gunzip ./annotation/annotation_reduced.gtf.gz
 
 ### 4. Add your data
 
@@ -47,6 +50,10 @@ Download GTF anottation file and put it in annotation folder. There's already an
 tensor/     →  your_tensor.npy     shape: (samples, SNPs, classes)
 bed_file/   →  your_snps.bed       columns: (header, tab-separated)
 ```
+There're already tensor and bed file present for demonstration purposes. Replace with your own.
+
+To use existing tensor:
+unzip tensor.npz && rm tensor.npz
 
 > The tensor and BED must have the **same SNP order**: axis 1 of the tensor = rows of the BED file.
 
